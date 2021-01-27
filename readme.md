@@ -20,6 +20,16 @@ Please perform the following instructions.
 // complete the function
 function palindrom(str) {
   // code goes here
+
+   // Lowercase the string and remove unwanted characters from it
+  var re = /[^A-Za-z0-9]/g;
+  var lowStr = str.toLowerCase().replace(re, '');
+
+  // Use javascript built in functions
+  var reverseStr = lowStr.split('').reverse().join(''); 
+
+  //Check if reverseStr is equals to lowStr and returns a Boolean
+  return reverseStr === lowStr;
 }
 
 function solution(arg) {
@@ -33,7 +43,6 @@ function solution(arg) {
 # run the solution
 $: npm start <input>
 ```
-
 ## Testing
 ``` shell
 $: npm test
